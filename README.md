@@ -40,3 +40,4 @@ Savollar orasida bo'sh qator bo'lsin. Variantlar a)–d), javob: harf.
 5. Botga `/yangi ...` yuboring — tayyor.
 
 Firestore qoidalari: hammasini yopib qo'ying (`allow read, write: if false;`) — barcha ishni server (Admin SDK) bajaradi.
+
