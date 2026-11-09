@@ -18,6 +18,8 @@ function parse(text) {
     else if (inMsg) msg.push(h);
   }
   const blocks = lines.join('\n').split(/\n\s*\n/).map(b => b.trim()).filter(Boolean);
+  // javobsiz va variantsiz boshlang'ich bloklar (bo'sh qatorli matn abzaclari) matnga qo'shiladi
+  while (blocks.length && !/^javob\s*:/im.test(blocks[0]) && !/^[a-d]\)/im.test(blocks[0])) msg.push('', blocks.shift());
   if (!blocks.length) throw new Error('savollar yo\'q');
   const questions = blocks.map((b, n) => {
     const L = b.split('\n').map(x => x.trim());
